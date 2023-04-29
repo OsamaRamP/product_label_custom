@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "/home/osama/odoo/odoo_16/odoo/odoo/http.py", line 1579, in _serve_db
+    return service_model.retrying(self._serve_ir_http, self.env)
+  File "/home/osama/odoo/odoo_16/odoo/odoo/service/model.py", line 134, in retrying
+    result = func()
+  File "/home/osama/odoo/odoo_16/odoo/odoo/http.py", line 1608, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+  File "/home/osama/odoo/odoo_16/odoo/odoo/http.py", line 1805, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+  File "/home/osama/odoo/odoo_16/odoo/addons/website/models/ir_http.py", line 235, in _dispatch
+    response = super()._dispatch(endpoint)
+  File "/home/osama/odoo/odoo_16/odoo/odoo/addons/base/models/ir_http.py", line 144, in _dispatch
+    result = endpoint(**request.params)
+  File "/home/osama/odoo/odoo_16/odoo/odoo/http.py", line 698, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+  File "/home/osama/odoo/odoo_16/odoo/addons/web/controllers/dataset.py", line 46, in call_button
+    action = self._call_kw(model, method, args, kwargs)
+  File "/home/osama/odoo/odoo_16/odoo/addons/web/controllers/dataset.py", line 33, in _call_kw
+    return call_kw(request.env[model], method, args, kwargs)
+  File "/home/osama/odoo/odoo_16/odoo/odoo/api.py", line 461, in call_kw
+    result = _call_kw_multi(method, model, args, kwargs)
+  File "/home/osama/odoo/odoo_16/odoo/odoo/api.py", line 448, in _call_kw_multi
+    result = method(recs, *args, **kwargs)
+  File "<decorator-gen-80>", line 2, in button_immediate_upgrade
+  File "/home/osama/odoo/odoo_16/odoo/odoo/addons/base/models/ir_module.py", line 76, in check_and_log
+    return method(self, *args, **kwargs)
+  File "/home/osama/odoo/odoo_16/odoo/odoo/addons/base/models/ir_module.py", line 678, in button_immediate_upgrade
+    return self._button_immediate_function(type(self).button_upgrade)
+  File "/home/osama/odoo/odoo_16/odoo/odoo/addons/base/models/ir_module.py", line 615, in _button_immediate_function
+    registry = modules.registry.Registry.new(self._cr.dbname, update_module=True)
+  File "<decorator-gen-14>", line 2, in new
+  File "/home/osama/odoo/odoo_16/odoo/odoo/tools/func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+  File "/home/osama/odoo/odoo_16/odoo/odoo/modules/registry.py", line 91, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/home/osama/odoo/odoo_16/odoo/odoo/modules/loading.py", line 482, in load_modules
+    processed_modules += load_marked_modules(cr, graph,
+  File "/home/osama/odoo/odoo_16/odoo/odoo/modules/loading.py", line 371, in load_marked_modules
+    loaded, processed = load_module_graph(
+  File "/home/osama/odoo/odoo_16/odoo/odoo/modules/loading.py", line 206, in load_module_graph
+    registry.setup_models(cr)
+  File "/home/osama/odoo/odoo_16/odoo/odoo/modules/registry.py", line 289, in setup_models
+    model._setup_fields()
+  File "/home/osama/odoo/odoo_16/odoo/odoo/models.py", line 2818, in _setup_fields
+    field.setup(self)
+  File "/home/osama/odoo/odoo_16/odoo/odoo/fields.py", line 516, in setup
+    self.setup_related(model)
+  File "/home/osama/odoo/odoo_16/odoo/odoo/fields.py", line 581, in setup_related
+    raise KeyError(
+KeyError: 'Field notice_days referenced in related field definition prepare.resignation.period does not exist.'
+
+The above server error caused the following client error:
+RPC_ERROR: Odoo Server Error
+    at makeErrorFromResponse (http://localhost:8016/web/assets/739-c88986a/web.assets_backend.min.js:957:163)
+    at XMLHttpRequest.<anonymous> (http://localhost:8016/web/assets/739-c88986a/web.assets_backend.min.js:964:13)
