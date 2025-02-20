@@ -1,7 +1,7 @@
 {
     'name': 'Products Labels Barcode ',
     'summary': 'Products Labels Barcode ',
-    'version': '16.0.5',
+    'version': '18.0.0',
     'price': 0,
     "author" : "Osama Ramadan",
     'sequence': 1,
