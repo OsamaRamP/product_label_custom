@@ -8,7 +8,7 @@
     'license': 'OPL-1',
     'category': 'product',
     	"images": [
-		"static/description/thumbnail.jpg"
+		"static/description/thumbnail.png"
 	],
     'depends': [
         'product',
