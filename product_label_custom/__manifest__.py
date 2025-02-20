@@ -7,6 +7,9 @@
     'sequence': 1,
     'license': 'OPL-1',
     'category': 'product',
+    	"images": [
+		"static/description/thumbnail.jpg"
+	],
     'depends': [
         'product',
     ],
